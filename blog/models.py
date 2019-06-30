@@ -27,4 +27,8 @@ class Post(models.Model):
         ordering = ('-publish',)
 
     def __str__(self):
-        return self.title
+        return "title: %s,\n body: %s, \n, status: %s \n" % (
+            self.title,
+            self.body,
+            self.status
+        )
